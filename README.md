@@ -55,7 +55,7 @@ Performance results  (10.5 GB dataset)
 
 | Parser                        | Throughput       | Time  | Features                        | Reference |
 |:------------------------------|:----------------:|:--------------------:|:-------------------------------:|:---------|
-| Soma                          | 1.5 – 3 GB/s     | 3 – 7 min           | Memory-mapped I/O + SIMD + Parallel | private repo
+| Soma                          | 1.5 – 3 GB/s     | 3 – 7 min           | Memory-mapped I/O + SIMD + Parallel | https://github.com/ed108206/soma-csv
 | vincentlaucsb/csv-parser      | 1 – 2 GB/s       | 5 – 10 min          | Memory-mapped I/O               | https://github.com/vincentlaucsb/csv-parser
 | simdjson adapt to CSV         | 1.5 – 2.5 GB/s   | 4 – 7 min           | SIMD + On-Demand parsing        | https://github.com/simdjson/simdjson
 | DuckDB CSV reader             | 2 – 3 GB/s       | 3 – 6 min           | Parallel CSV reader             | https://duckdb.org/docs/data/csv/overview
