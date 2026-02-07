@@ -1,0 +1,35 @@
+name: CMake Build (Windows MinGW)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install MSYS2 + MinGW
+      uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        install: >
+          mingw-w64-x86_64-gcc
+          mingw-w64-x86_64-cmake
+          make
+
+    - name: Configure CMake (MinGW)
+      shell: msys2 {0}
+      run: cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+
+    - name: Build
+      shell: msys2 {0}
+      run: cmake --build build
+
+    - name: Run tests
+      shell: msys2 {0}
+      run: ctest --test-dir build
