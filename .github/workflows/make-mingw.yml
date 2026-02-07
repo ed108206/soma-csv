@@ -26,14 +26,14 @@ jobs:
       shell: msys2 {0}
       run: make
 
-    - name: Upload Release binary
+    - name: Upload Release folder
       uses: actions/upload-artifact@v4
       with:
-        name: Soma-Release
-        path: build/Release/Soma
+        name: build-Release
+        path: build/Release/*
 
-    - name: Upload Debug binary
+    - name: Upload Debug folder
       uses: actions/upload-artifact@v4
       with:
-        name: Soma-Debug
-        path: build/Debug/dSoma
+        name: build-Debug
+        path: build/Debug/*
