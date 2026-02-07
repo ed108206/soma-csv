@@ -20,7 +20,7 @@ jobs:
         install: >
           mingw-w64-x86_64-gcc
           mingw-w64-x86_64-cmake
-          make
+          mingw-w64-x86_64-make
 
     - name: Configure CMake (MinGW)
       shell: msys2 {0}
