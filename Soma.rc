@@ -1,0 +1,44 @@
+#include "resource.h"
+#include "windows.h"
+
+IDI_ICON1               ICON    DISCARDABLE     "res\\soma.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\small.ico"
+
+STRINGTABLE DISCARDABLE
+BEGIN
+    IDS_APP_TITLE           "Soma"
+    IDC_SOMA                "SOMA"
+END
+
+IDR_MENU1 MENU DISCARDABLE
+BEGIN
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Close Current Tab",       ID_CLOSE_TAB
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                       ID_SALIR
+    END
+    POPUP "Windows"
+    BEGIN
+        MENUITEM "LView",                       ID_L1
+        MENUITEM "EView",                       ID_E1
+    END
+END
+
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 281, 142
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT |
+                    LVS_OWNERDATA | WS_TABSTOP,15,40,145,60
+    CTEXT           "",IDC_STATIC1,20,15,135,12,SS_NOTIFY | SS_CENTERIMAGE
+    CTEXT           "Detach",IDC_STATIC2,95,20,26,10,SS_NOTIFY | SS_CENTERIMAGE
+END
+
+
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\p1.bmp"
+IDR_MANIFEST            24      DISCARDABLE     "res\\Soma.exe.manifest"
+
