@@ -20,7 +20,20 @@ jobs:
         install: >
           mingw-w64-x86_64-gcc
           mingw-w64-x86_64-make
+          mingw-w64-x86_64-binutils
 
     - name: Build with Makefile
       shell: msys2 {0}
       run: make
+
+    - name: Upload Release binary
+      uses: actions/upload-artifact@v4
+      with:
+        name: Soma-Release
+        path: build/Release/Soma
+
+    - name: Upload Debug binary
+      uses: actions/upload-artifact@v4
+      with:
+        name: Soma-Debug
+        path: build/Debug/dSoma
