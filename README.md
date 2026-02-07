@@ -1,5 +1,10 @@
 # Win32 Splitter + Fast CSV Viewer - soma-csv
 
+# Proyecto Soma
+
+![CMake Build](https://github.com/ed108206/soma-csv/actions/workflows/cmake-multi-platform.yml/badge.svg)
+![Make Build](https://github.com/ed108206/soma-csv/actions/workflows/make-mingw.yml/badge.svg)
+
 This project is a small Win32 desktop app that combines a custom splitter control, a tree view, and fast CSV loading.  
 It's written in C++ using plain Win32 APIs with a focus on speed and simplicity.
 
