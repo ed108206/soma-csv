@@ -57,14 +57,6 @@ Here's a simple ASCII diagram of the main window layout:
 Performance results  (10.5 GB dataset)
 - Ratio: 25M rows / 13.56 s ≈ 1.84M rows/second. 
 
-| Parser                        | Throughput       | Time  | Features                        | Reference |
-|:------------------------------|:----------------:|:--------------------:|:-------------------------------:|:---------|
-| Soma                          | 1.5 – 3 GB/s     | 3 – 7 min           | Memory-mapped I/O + SIMD + Parallel | https://github.com/ed108206/soma-csv
-| vincentlaucsb/csv-parser      | 1 – 2 GB/s       | 5 – 10 min          | Memory-mapped I/O               | https://github.com/vincentlaucsb/csv-parser
-| simdjson adapt to CSV         | 1.5 – 2.5 GB/s   | 4 – 7 min           | SIMD + On-Demand parsing        | https://github.com/simdjson/simdjson
-| DuckDB CSV reader             | 2 – 3 GB/s       | 3 – 6 min           | Parallel CSV reader             | https://duckdb.org/docs/data/csv/overview
-|                               |                  |                     |                                 | https://duckdb.org/docs/guides/performance/huge_databases  
-
 ## Build
 
 You can build the project in two ways:
